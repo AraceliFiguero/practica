@@ -55,5 +55,6 @@ public class Cliente {
     public void setDni(int dni) {
         this.dni = dni;
     }
-            
+ 
+    
 }
