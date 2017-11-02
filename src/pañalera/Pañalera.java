@@ -5,6 +5,8 @@
  */
 package pañalera;
 
+import BaseDeDatosPañalera.ConexionesBaseDeDatos;
+
 /**
  *
  * @author Araceli
@@ -16,6 +18,10 @@ public class Pañalera {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        ConexionesBaseDeDatos prueba = new ConexionesBaseDeDatos();
+        prueba.getConexionMysql();
+        
     }
     
 }
