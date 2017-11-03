@@ -5,16 +5,37 @@
  */
 package pañalera;
 
+import java.util.Date;
+import java.util.List;
+
 /**
  *
  * @author Araceli
  */
-public class FacturaVenta {
+public class facturaVenta {
     private int numFacturaVenta;
-    private char tipoFactura;
-    private char nomLocal;
+    private String tipoFactura;
+    private String nomLocal;
     private int cuit;
+    private Date fecha;
+    private List<detalleVenta> detalles;
     //private int idPedido;
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public List<detalleVenta> getDetalles() {
+        return detalles;
+    }
+
+    public void setDetalles(List<detalleVenta> detalles) {
+        this.detalles = detalles;
+    }
 
     public int getNumFacturaVenta() {
         return numFacturaVenta;
@@ -24,19 +45,19 @@ public class FacturaVenta {
         this.numFacturaVenta = numFacturaVenta;
     }
 
-    public char getTipoFactura() {
+    public String getTipoFactura() {
         return tipoFactura;
     }
 
-    public void setTipoFactura(char tipoFactura) {
+    public void setTipoFactura(String tipoFactura) {
         this.tipoFactura = tipoFactura;
     }
 
-    public char getNomLocal() {
+    public String getNomLocal() {
         return nomLocal;
     }
 
-    public void setNomLocal(char nomLocal) {
+    public void setNomLocal(String nomLocal) {
         this.nomLocal = nomLocal;
     }
 

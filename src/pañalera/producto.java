@@ -9,11 +9,11 @@ package pañalera;
  *
  * @author Araceli
  */
-public class Producto {
+public class producto {
     private int idProducto;
-    private char tipoProducto;
-    private char marca;
-    private char descripcion;
+    private String tipoProducto;
+    private String marca;
+    private String descripcion;
     private float precio;
 
     public int getIdProducto() {
@@ -24,27 +24,27 @@ public class Producto {
         this.idProducto = idProducto;
     }
 
-    public char getTipoProducto() {
+    public String getTipoProducto() {
         return tipoProducto;
     }
 
-    public void setTipoProducto(char tipoProducto) {
+    public void setTipoProducto(String tipoProducto) {
         this.tipoProducto = tipoProducto;
     }
 
-    public char getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    public void setMarca(char marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
-    public char getDescripcion() {
+    public String getDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(char descripcion) {
+    public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 

@@ -9,18 +9,18 @@ package pañalera;
  *
  * @author Araceli
  */
-public class DetalleCompra {
-    private int idProducto;
-    //private int idCompra;
+public class detalleCompra {
+     //private int idCompra;
+    private producto producto;
     private int cantidad;
     private float subtotal;
 
-    public int getIdProducto() {
-        return idProducto;
+    public producto getProducto() {
+        return producto;
     }
 
-    public void setIdProducto(int idProducto) {
-        this.idProducto = idProducto;
+    public void setProducto(producto producto) {
+        this.producto = producto;
     }
 
    /* public int getIdCompra() {

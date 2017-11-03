@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import pañalera.cliente;
 
 
 public class ConexionesBaseDeDatos {
@@ -38,7 +39,7 @@ public class ConexionesBaseDeDatos {
         ResultSet rs = statement.executeQuery("select * from clientes");
 
         while (rs.next()) {
-            Cliente cliente = new Cliente();
+            cliente cliente = new cliente();
             cliente.setId((int) rs.getLong("id"));
             cliente.setNombre(rs.getString("nombre"));
             cliente.setCuit(rs.getString("cuit"));
@@ -49,17 +50,17 @@ public class ConexionesBaseDeDatos {
         rs.close();
 
         return clientes;
-    }
+    }*/
 
-    public void insertarCliente(Cliente cliente) {
+    public void insertarCliente(cliente cliente) {
         Connection conexion = this.getConexionMysql();
 
         String query = "INSERT INTO clientes VALUES("
-                + "\"" + cliente.getId() + "\", "
+                + "\"" + cliente.getIdCliente()+ "\", "
                 + "\"" + cliente.getNombre() + "\", "
-                + "\"" + cliente.getEmail() + "\", "
-                + "\"" + cliente.getCuit() + "\", "
-                + "\"" + cliente.getTipo() + "\")";
+                + "\"" + cliente.getApellido()+ "\", "
+                + "\"" + cliente.getTelefono()+ "\", "
+                + "\"" + cliente.getDni()+ "\")";
 
         Statement st;
         try {
@@ -70,7 +71,7 @@ public class ConexionesBaseDeDatos {
         }
     }
 
-    public void insertarPedido(Pedido pedido) {
+   /* public void insertarPedido(Pedido pedido) {
         Connection conexion = this.getConexionMysql();
 
         String insert = "INSERT INTO pedidos VALUES (" + pedido.getNumeroPedido() + ", " + pedido.getNumeroPedido() + ")";
@@ -84,8 +85,8 @@ public class ConexionesBaseDeDatos {
 
     }
 
-    public Cliente buscarClientePorId(int id) {
-        Cliente cliente = new Cliente();
+    public cliente buscarClientePorId(int id) {
+        cliente cliente = new cliente();
         Connection conexion = this.getConexionMysql();
         try {
             Statement st = conexion.createStatement();
@@ -106,8 +107,8 @@ public class ConexionesBaseDeDatos {
         return cliente;
     }
 
-    public Cliente buscarClientePorCuit(String cuit) {
-        Cliente cliente = new Cliente();
+    public cliente buscarClientePorCuit(String cuit) {
+        cliente cliente = new cliente();
         Connection conexion = this.getConexionMysql();
         try {
             Statement st = conexion.createStatement();

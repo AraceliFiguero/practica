@@ -9,10 +9,10 @@ package pañalera;
  *
  * @author Araceli
  */
-public class Cliente {
+public class cliente {
     private int idCliente;
-    private char apellido;
-    private char nombre;
+    private String apellido;
+    private String nombre;
     private int telefono;
     private int dni;
 
@@ -24,19 +24,19 @@ public class Cliente {
         this.idCliente = idCliente;
     }
 
-    public char getApellido() {
+    public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(char apellido) {
+    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public char getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(char nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
